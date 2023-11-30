@@ -29,10 +29,13 @@ let personalMovieDB = {
 for (let i = 0; i < 2; i++) {
     let a = prompt("Один из последних просмотренных фильмов?", ""),
         b = prompt("На сколько оцените его?", "");
+
         personalMovieDB.movies[a] = b;
-    if (a == '' || b == '' || a.length > 50) {
+
+    if (a != null && b != null && a != "" && b != "" && a.length < 50) {
         i--;
     } 
+
 }
 
 if (personalMovieDB.count < 10) {
