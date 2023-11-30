@@ -32,7 +32,7 @@ for (let i = 0; i < 2; i++) {
 
         personalMovieDB.movies[a] = b;
 
-    if (a != null && b != null && a != "" && b != "" && a.length < 50) {
+    if ( a == "" || b == "" || a == null || b == null || a.length > 50) {
         i--;
     } 
 
