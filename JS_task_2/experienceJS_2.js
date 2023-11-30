@@ -30,11 +30,14 @@ for (let i = 0; i < 2; i++) {
     let a = prompt("Один из последних просмотренных фильмов?", ""),
         b = prompt("На сколько оцените его?", "");
 
-        personalMovieDB.movies[a] = b;
 
-    if ( a == "" || b == "" || a == null || b == null || a.length > 50) {
+    if ( a != null && b != null && a != '' && b != '' && a.length < 10) {
+        console.log("done");
+        personalMovieDB.movies[a] = b;
+    } else {
+        console.log("error");
         i--;
-    } 
+    }
 
 }
 
